@@ -1,6 +1,6 @@
 # Sandwich Club Project 
 
 ## Project Overview
-This project is the first project of Android Developer's Nanodegree
+This is the first project of Udacity's Android Developer's Nanodegree
 
 
