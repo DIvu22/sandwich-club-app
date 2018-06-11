@@ -66,10 +66,8 @@ public class  DetailActivity extends AppCompatActivity {
         known=(TextView)findViewById(R.id.also_known_tv);
         ingredients=(TextView)findViewById(R.id.ingredients_tv);
 
-        android.app.ActionBar ab= getActionBar();
-        ab.setTitle(sandwich.getMainName());
-
-        description.setText(sandwich.getDescription());
+         getSupportActionBar().setTitle(sandwich.getMainName());
+         description.setText(sandwich.getDescription());
         origin.setText(sandwich.getPlaceOfOrigin());
         known.setText(model(sandwich.getAlsoKnownAs()));
         ingredients.setText(model(sandwich.getIngredients()));
