@@ -43,13 +43,16 @@ public class JsonUtils {
                 for (int i = 0; i < ingredients.length(); i++) {
                     ingList.add(ingredients.getString(i));
                 }
+
             }
+            return new Sandwich(mainName,knownList,placeOfOrigin,description,image,ingList);
 
 
         } catch (JSONException e) {
 
+
         }
-        return new Sandwich();
+        return null;
 
     }
 }
