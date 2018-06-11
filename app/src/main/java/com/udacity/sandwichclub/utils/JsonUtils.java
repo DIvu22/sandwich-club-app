@@ -19,8 +19,8 @@ public class JsonUtils {
             JSONObject sandwhich = new JSONObject(json);
             JSONObject name= sandwhich.getJSONObject("name");
             String mainName= name.getString("mainName");
-            JSONArray alsoKnownAs= name.getJSONArray("alsoKnownAs");
 
+            JSONArray alsoKnownAs= name.getJSONArray("alsoKnownAs");
             ArrayList<String> knownList=new ArrayList<>();
 
             if(alsoKnownAs.length()!=0) {
@@ -34,12 +34,11 @@ public class JsonUtils {
             String description=sandwhich.getString("description");
             String image=sandwhich.getString("image");
 
-            JSONArray ingredients= name.getJSONArray("ingredients");
-
+            JSONArray ingredients= sandwhich.getJSONArray("ingredients");
             ArrayList<String>ingList=new ArrayList<>();
 
-
             if(ingredients.length()!=0) {
+
                 for (int i = 0; i < ingredients.length(); i++) {
                     ingList.add(ingredients.getString(i));
                 }
@@ -47,11 +46,9 @@ public class JsonUtils {
             }
             return new Sandwich(mainName,knownList,placeOfOrigin,description,image,ingList);
 
-
         } catch (JSONException e) {
 
-
-        }
+            }
         return null;
 
     }
